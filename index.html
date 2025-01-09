@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,14 +12,15 @@
     <div class="box">
     <header><h1>AI Poem Generator</h1></header>
 
-    <main>
-        <input type="text" class="text" placeholder="Enter your Topic!"
+    <main id="input">
+        <input type="text" id="text" class="text" placeholder="Enter your Topic!"
         autofocus
         required
         >
-        <input type="submit" class="submit">
+        <input type="submit" class="submit" id="submit">
     </main>
-    <div class="poem">
+    <div class="poem"
+    id="poem">
         I have taken scales from off 
         <br>
 The cheeks of the moon.
