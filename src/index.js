@@ -13,7 +13,9 @@ function searchResults(event){
     console.log(`love`)
     let topicElement = document.querySelector(`#text`)
     let poem = document.querySelector(`#poem`)
+    let hint = document.querySelector(`.hint`)
     poem.classList.add(`poem`)
+    hint.classList.add(`none`)
     let topic = topicElement.value
     let key = `313bd4cf07a141554b6c1ta1037bbboc`
     let prompt = `make poem about ${topic}`
@@ -21,7 +23,7 @@ function searchResults(event){
     let APIurl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`
 
     new Typewriter("#poem", {
-        strings: `Generating Poem...`,
+        strings: `Generating Poem about ${topic}...`,
         autoStart: true,
         delay: 100,
       });
